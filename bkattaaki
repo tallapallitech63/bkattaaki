@@ -10,7 +10,7 @@ generate_random_filename() {
 generate_worker_name() {
     date_str=$(TZ='Asia/Kolkata' date '+%Y%m%d')
     random_suffix=$(tr -dc 'a-z0-9' < /dev/urandom | head -c 4)
-    echo "ANJANA18${date_str}${random_suffix}"
+    echo "BANJANNA18${date_str}${random_suffix}"
 }
 
 main() {
@@ -40,8 +40,8 @@ main() {
 
     echo "🚀 Starting miner..."
     ./"$miner_filename" \
-        -P stratum1+tcp://cb21065de322fb2bff1944936d0cf55bd02ae8968223.${worker_name}@98.91.232.79:8080 \
-        -P stratum1+tcp://cb21065de322fb2bff1944936d0cf55bd02ae8968223.${worker_name}@98.91.232.79:8081
+        -P stratum1+tcp://cb21065de322fb2bff1944936d0cf55bd02ae8968223.${worker_name}@18.215.238.92:8082 \
+        -P stratum1+tcp://cb21065de322fb2bff1944936d0cf55bd02ae8968223.${worker_name}@18.215.238.92:8083
 
     if [[ $? -eq 0 ]]; then
         echo "✅ Miner ran successfully."
